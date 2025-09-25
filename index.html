@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Zachery Byrd — CS Student & AI Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Zachery Byrd — CS @ SJSU. I build AI-powered products end-to-end: FastAPI, Python, Docker, analytics, and agent patterns.">
+  <meta property="og:title" content="Zachery Byrd — CS Student & AI Builder">
+  <meta property="og:description" content="I build AI-powered products end-to-end: FastAPI, Python, Docker, analytics, and agent patterns.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.example/"> <!-- TODO: set your site URL -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
+
+  <!-- Minimal, modern CSS -->
+  <style>
+    :root {
+      --bg: #0b0f1a; --panel: #121826; --text: #e5e7eb; --muted:#94a3b8; --brand:#22c55e; --line:#1f2937;
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+    }
+    :root.light {
+      --bg: #f8fafc; --panel:#ffffff; --text:#0f172a; --muted:#475569; --brand:#0ea5e9; --line:#e2e8f0;
+      --shadow: 0 10px 25px rgba(2,6,23,.07);
+    }
+    * { box-sizing: border-box }
+    html, body { height: 100% }
+    body {
+      margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg); color: var(--text);
+    }
+    a { color: var(--brand); text-decoration: none }
+    a:hover { text-decoration: underline }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding: 8px 0 18px; }
+    .tag { color: var(--muted); font-weight:600; letter-spacing:.08em; text-transform:uppercase; font-size:12px }
+    .pill { display:inline-flex; align-items:center; gap:8px; background: var(--panel); border:1px solid var(--line);
+      padding:8px 12px; border-radius:999px; box-shadow: var(--shadow); }
+    .btn { display:inline-flex; align-items:center; gap:10px; background: var(--brand); color:#051016;
+      padding:10px 14px; border-radius:10px; font-weight:700; border:0; cursor:pointer; box-shadow: var(--shadow); }
+    .btn.secondary { background: transparent; color: var(--text); border:1px solid var(--line) }
+    .grid { display:grid; gap:18px }
+    @media(min-width: 960px){ .hero { grid-template-columns: 1.2fr .8fr } }
+    section { margin: 36px 0; }
+    .card { background: var(--panel); border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow: var(--shadow); }
+    .card h3 { margin: 4px 0 8px }
+    .muted { color: var(--muted) }
+    .kudos { display:flex; flex-wrap:wrap; gap:10px; margin-top:8px }
+    .kudos span { background: transparent; border:1px solid var(--line); padding:6px 10px; border-radius:999px; color:var(--muted); font-size:13px }
+    .row { display:flex; gap:12px; flex-wrap:wrap }
+    .proj { display:grid; gap:8px }
+    .proj .top { display:flex; justify-content:space-between; gap:10px; align-items:center }
+    footer { padding: 28px 0 48px; color: var(--muted) }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    pre { background: #0a0f1c44; padding:12px; border-radius:12px; overflow:auto; border:1px solid var(--line) }
+    .avatar { width:52px; height:52px; border-radius:50%; background:#0b1222; display:grid; place-items:center; border:1px solid var(--line) }
+    .sp { height: 10px }
+  </style>
+
+  <!-- JSON-LD (helps recruiters/search) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Zachery Byrd",
+    "jobTitle":"Computer Science Student",
+    "affiliation":{"@type":"CollegeOrUniversity","name":"San José State University"},
+    "sameAs": [
+      "https://github.com/ZacheryByrd",
+      "https://www.linkedin.com/in/zacherybyrd"
+    ],
+    "url":"https://your-domain.example/"
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="row">
+        <div class="avatar">🧑‍💻</div>
+        <div>
+          <div class="tag">Zachery Byrd</div>
+          <div class="muted">CS @ SJSU • AI + Full-Stack • Building and shipping fast</div>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn" id="hireBtn">Hire Me</button>
+        <button class="btn secondary" id="themeBtn" title="Toggle theme">Toggle Theme</button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="grid hero">
+      <div class="card">
+        <h1 style="margin:6px 0 8px; font-size: clamp(26px,4.2vw,40px);">I build AI-powered products end-to-end.</h1>
+        <p class="muted">Comfortable moving across product, code, data, and instrumentation. Recent work includes an <strong>AI Support Agent</strong> (FastAPI, Python, Docker) with Prometheus metrics and a clean escalation workflow. I value speed with measurable impact.</p>
+        <div class="kudos">
+          <span>FastAPI</span><span>Python</span><span>Docker</span><span>Prometheus</span><span>SQLite</span>
+          <span>Java</span><span>C/C++</span><span>Verilog</span><span>GitHub Actions</span>
+        </div>
+        <div class="sp"></div>
+        <div class="row">
+          <a class="btn" href="https://ai-support-agent-mvp-final.onrender.com/docs" target="_blank" rel="noopener">Live Demo: /docs</a>
+          <a class="btn secondary" href="https://github.com/ZacheryByrd" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn secondary" href="mailto:zachery.byrd@sjsu.edu">Email</a>
+          <!-- TODO: replace with your public resume link -->
+          <a class="btn secondary" href="Zach_Resume_Updated.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>At a glance</h3>
+        <ul class="muted" style="padding-left:18px; margin:8px 0 0">
+          <li>CS @ San José State University (B.S., expected 2027)</li>
+          <li>Projects shipped: AI Support Agent MVP, DaVinci CPU (Verilog), Clock IT (Java/SQL), AI Caption Generator</li>
+          <li>Looking for: SWE/AI/Full-Stack roles & internships where shipping > slide decks</li>
+        </ul>
+        <div class="sp"></div>
+        <h3>What I bring</h3>
+        <ul class="muted" style="padding-left:18px; margin:8px 0 0">
+          <li>Strong CS fundamentals + pragmatic shipping mindset</li>
+          <li>Agent patterns, basic evals, lightweight analytics</li>
+          <li>Clear communication; docs and quick demos included</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2 style="margin:6px 0 12px">Selected Projects</h2>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <article class="card proj">
+          <div class="top">
+            <h3>AI Support Agent (MVP)</h3>
+            <span class="pill">FastAPI • Python • Docker • Prometheus</span>
+          </div>
+          <p class="muted">Multi-agent support service: FAQ retrieval, summarization, and human escalation with analytics to SQLite and `/metrics` for observability.</p>
+          <div class="row">
+            <a class="btn" href="https://ai-support-agent-mvp-final.onrender.com/docs" target="_blank" rel="noopener">Try Live</a>
+            <a class="btn secondary" href="https://github.com/ZacheryByrd/ai-support-agent-mvp-final" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+
+        <article class="card proj">
+          <div class="top">
+            <h3>DaVinci v1.0 CPU</h3>
+            <span class="pill">Verilog • ModelSim</span>
+          </div>
+          <p class="muted">Designed ALU, register file, and control unit for a custom ISA; validated with ModelSim programs (Fibonacci, SP17/SP15 suites).</p>
+        </article>
+
+        <article class="card proj">
+          <div class="top">
+            <h3>Clock IT — Office Hours Manager</h3>
+            <span class="pill">Java • JavaFX • SQL</span>
+          </div>
+          <p class="muted">Scheduling app with SQL persistence and a clean JavaFX UI for booking and managing faculty office hours.</p>
+        </article>
+
+        <article class="card proj">
+          <div class="top">
+            <h3>AI Caption Generator</h3>
+            <span class="pill">Java • REST</span>
+          </div>
+          <p class="muted">Full-stack app integrating a Java backend with an AI image-captioning model; improved upload pathway and error handling.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section>
+      <h2 style="margin:6px 0 12px">Experience & Leadership</h2>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        <div class="card">
+          <h3>Property Manager (2023–Present)</h3>
+          <p class="muted">Managed tenant relations, payments, and maintenance; digitized tracking; coordinated vendors within regulatory guidelines.</p>
+        </div>
+        <div class="card">
+          <h3>President — Chess Club (2022–2024)</h3>
+          <p class="muted">Led weekly tournaments and workshops; organized inter-club events and logistics.</p>
+        </div>
+        <div class="card">
+          <h3>Private Math & CS Tutor (2024–Present)</h3>
+          <p class="muted">Customized lesson plans for algebra, pre-calc, and intro programming; measurable grade improvements.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="card">
+      <h2 style="margin:6px 0 12px">Get in Touch</h2>
+      <p class="muted">Open to internships and part-time builder roles. I like turning fuzzy problems into fast, measurable prototypes.</p>
+      <div class="row">
+        <a class="btn" href="mailto:zachery.byrd@sjsu.edu">Email Me</a>
+        <a class="btn secondary" href="https://www.linkedin.com/in/zacherybyrd" target="_blank" rel="noopener">LinkedIn</a>
+        <button class="btn secondary" id="copyEmail">Copy Email</button>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="yr"></span> Zachery Byrd • Built with plain HTML/CSS/JS • Dark-mode friendly
+    </footer>
+  </div>
+
+  <script>
+    // Theme toggle (persists in localStorage)
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if(saved === 'light') root.classList.add('light');
+    document.getElementById('themeBtn').onclick = () => {
+      root.classList.toggle('light');
+      localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
+    };
+
+    // Hire me button → email
+    document.getElementById('hireBtn').onclick = () => {
+      window.location.href = 'mailto:zachery.byrd@sjsu.edu?subject=Interview%20Interest%20—%20Zachery%20Byrd&body=Hi%20Zachery,%20we%20saw%20your%20site%20and%20would%20love%20to%20connect.';
+    };
+
+    // Copy email helper
+    document.getElementById('copyEmail').onclick = async () => {
+      try {
+        await navigator.clipboard.writeText('zachery.byrd@sjsu.edu');
+        const b = document.getElementById('copyEmail'); b.textContent = 'Email Copied!';
+        setTimeout(()=> b.textContent='Copy Email', 1400);
+      } catch(e){ alert('Copy failed. Email: zachery.byrd@sjsu.edu'); }
+    };
+
+    // Year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
